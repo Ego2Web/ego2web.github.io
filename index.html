@@ -380,10 +380,29 @@ body {
   max-width: 1300px;
   margin: 30px auto;
   padding: 0 20px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.18);
+  border-radius: 999px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.04);
 }
 
 .styled-table {
   width: 100%;
+  min-width: 760px;
   border-collapse: collapse;
   border-radius: 16px;
   overflow: hidden;
@@ -656,6 +675,166 @@ body {
     transform: none;
     filter: none;
     transition: none;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .nav-inner {
+    padding: 14px 16px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 18px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    flex: 0 0 auto;
+    font-size: 15px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 150px 18px 60px;
+  }
+
+  .title {
+    font-size: clamp(44px, 14vw, 72px);
+  }
+
+  .subtitle {
+    font-size: clamp(22px, 6vw, 30px);
+    line-height: 1.25;
+  }
+
+  .conference {
+    margin-top: 22px;
+    font-size: 26px;
+  }
+
+  .authors {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .affiliation {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .btn {
+    margin: 0;
+    padding: 11px 18px;
+    font-size: 14px;
+  }
+
+  .section {
+    margin: 56px auto;
+    padding: 0 10px;
+    scroll-margin-top: 108px;
+  }
+
+  .overview-shell {
+    padding: 18px 14px;
+    gap: 18px;
+    border-radius: 24px;
+  }
+
+  .section-tag {
+    font-size: 18px;
+    padding: 7px 12px;
+    margin-bottom: 12px;
+  }
+
+  .overview-copy h2 {
+    font-size: 24px;
+  }
+
+  .overview-lead,
+  .analysis-card p,
+  .error-list li {
+    font-size: 15px;
+    line-height: 1.75;
+    text-align: left;
+  }
+
+  .overview-figure-card {
+    width: 100%;
+    padding: 12px;
+    border-radius: 22px;
+  }
+
+  .overview-figure-card img {
+    border-radius: 16px;
+  }
+
+  .overview-caption,
+  .table-caption {
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .table-container {
+    margin: 20px auto;
+    padding: 0;
+    border-radius: 16px;
+  }
+
+  .styled-table {
+    min-width: 720px;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .analysis-grid-custom {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .analysis-card {
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+
+  .analysis-card h3 {
+    font-size: 18px;
+  }
+
+  .citation {
+    padding: 60px 14px;
+  }
+
+  .bibtex-box {
+    padding: 16px;
   }
 }
 
