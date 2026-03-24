@@ -838,6 +838,20 @@ body {
   }
 }
 
+.hero-video {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-video video {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  display: block;
+}
+
 </style>
 </head>
 
@@ -988,8 +1002,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
     <div class="buttons">
       <a href="#" class="btn primary">Paper</a>
-      <a href="#" class="btn primary">Code</a>
-      <a href="#" class="btn primary">Dataset</a>
+      <a href="https://github.com/Yui010206/Ego2Web" class="btn primary">Code</a>
+      <a href="https://huggingface.co/datasets/Shoubin/Ego2Web" class="btn primary">Dataset</a>
+    </div>
+
+    <div class="hero-video">
+<video autoplay muted loop playsinline controls preload="auto">
+  <source src="assets/demo.mp4" type="video/mp4">
+</video>
     </div>
 
   </div>
